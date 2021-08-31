@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?define ComponentRules="OneToOne"?>
+  <!-- SourceDir instructs IsWiX the location of the directory that contains files for this merge module -->
+  <?define SourceDir="..\Deploy"?>
+  <Module Id="liquidctl_installerMM" Language="1033" Version="1.0.0.0">
+    <Package Id="92d991fe-702e-4aef-9721-e3e8075525a9" Manufacturer="liquidctl_installerMM" InstallerVersion="200" InstallScope="perMachine" InstallPrivileges="elevated" />
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="MergeRedirectFolder">
+        <Component Id="owcD105ECB58FF1CF51ADAD527C6D66FF5F" Guid="21d48ca2-4a61-bbdc-371e-b0aab538c74a">
+          <File Id="owfD105ECB58FF1CF51ADAD527C6D66FF5F" Source="$(var.SourceDir)\CHANGELOG.md" KeyPath="yes" />
+        </Component>
+        <Component Id="owc5B6576BEE0FDD0CEBC41DB5664957C6F" Guid="5d3db102-3650-79fa-4eb8-99d348f21633">
+          <File Id="owf5B6576BEE0FDD0CEBC41DB5664957C6F" Source="$(var.SourceDir)\COPYRIGHT.txt" KeyPath="yes" />
+        </Component>
+        <Component Id="owc592563E0354698B58441A28FE4689ED1" Guid="3859e702-5a3b-de1d-a8ea-6cd8b51588dd">
+          <File Id="owf592563E0354698B58441A28FE4689ED1" Source="$(var.SourceDir)\included.txt" KeyPath="yes" />
+        </Component>
+        <Component Id="owcBD93FD9C3EE0E08A46FEABFBAEAB59BD" Guid="04fbb35d-d184-454a-4479-637844ab1b45">
+          <File Id="owfBD93FD9C3EE0E08A46FEABFBAEAB59BD" Source="$(var.SourceDir)\LICENSE.txt" KeyPath="yes" />
+        </Component>
+        <Component Id="owc8142C8EAFA9B93E2B049EEEE307D0FE0" Guid="b53f4a16-e505-1858-5cc6-97854c471fe6">
+          <File Id="owf8142C8EAFA9B93E2B049EEEE307D0FE0" Source="$(var.SourceDir)\liquidctl.exe" KeyPath="yes" />
+        </Component>
+        <Component Id="owc1D2FFCAF5479652EB569C6B806A5EF6F" Guid="2b9f6c22-9491-505b-f5e8-5197cfcb6775">
+          <File Id="owf1D2FFCAF5479652EB569C6B806A5EF6F" Source="$(var.SourceDir)\README.md" KeyPath="yes" />
+        </Component>
+        <Directory Id="owdA0B1970AF2FACEEA095FFFF8F651612F" Name="docs">
+          <Component Id="owc7396B3193907335263292E10B2E47255" Guid="cdbca755-f4ce-9e3b-23e1-8c38fda3d823">
+            <File Id="owf7396B3193907335263292E10B2E47255" Source="$(var.SourceDir)\docs\asetek-690lc-guide.md" KeyPath="yes" />
+          </Component>
+          <Component Id="owc0EF0D692E92DF9BD3BE549BD1BBA35AB" Guid="a5b8935a-4d60-6ac4-95cb-95f3ac966b3f">
+            <File Id="owf0EF0D692E92DF9BD3BE549BD1BBA35AB" Source="$(var.SourceDir)\docs\asetek-pro-guide.md" KeyPath="yes" />
+          </Component>
+          <Component Id="owcD12E424F242898ECEED7F9AEEA2440D5" Guid="b5138907-7d06-8d16-f0e9-f32e181a35b3">
+            <File Id="owfD12E424F242898ECEED7F9AEEA2440D5" Source="$(var.SourceDir)\docs\corsair-commander-core-guide.md" KeyPath="yes" />
+          </Component>
+          <Component Id="owc964B93E4AA566BCFADF4061611690DC2" Guid="8379a6fb-7f16-5408-484a-94ee87dddc81">
+            <File Id="owf964B93E4AA566BCFADF4061611690DC2" Source="$(var.SourceDir)\docs\corsair-commander-guide.md" KeyPath="yes" />
+          </Component>
+          <Component Id="owc1B070D9AC683B5ED970107F52471374E" Guid="b2a5890c-116c-204f-cf85-4def7d871cfe">
+            <File Id="owf1B070D9AC683B5ED970107F52471374E" Source="$(var.SourceDir)\docs\corsair-hxi-rmi-psu-guide.md" KeyPath="yes" />
+          </Component>
+          <Component Id="owc0019516CAF9077E5E5DD59F8AAFFEA4B" Guid="ea5ba261-df7b-fe1d-dea1-ccbb131820c9">
+            <File Id="owf0019516CAF9077E5E5DD59F8AAFFEA4B" Source="$(var.SourceDir)\docs\corsair-platinum-pro-xt-guide.md" KeyPath="yes" />
+          </Component>
+          <Component Id="owc6A9BB6F4338AF364C4CBCFA2FE74147E" Guid="df6ecc7e-8106-a0b3-5ce2-086ab97eb93a">
+            <File Id="owf6A9BB6F4338AF364C4CBCFA2FE74147E" Source="$(var.SourceDir)\docs\ddr4-guide.md" KeyPath="yes" />
+          </Component>
+          <Component Id="owcA3421A1193BD3543554667E2C40F6AC9" Guid="414ff9e9-6d22-ce7e-f3d3-a4a5560fd12b">
+            <File Id="owfA3421A1193BD3543554667E2C40F6AC9" Source="$(var.SourceDir)\docs\gigabyte-rgb-fusion2-guide.md" KeyPath="yes" />
+          </Component>
+          <Component Id="owc5A75EBFDB72D777E987A7C6562EF3B60" Guid="19495138-7f85-bcee-b241-a3787a3f86a6">
+            <File Id="owf5A75EBFDB72D777E987A7C6562EF3B60" Source="$(var.SourceDir)\docs\kraken-x2-m2-guide.md" KeyPath="yes" />
+          </Component>
+          <Component Id="owcEA08BE9D386B8A7DE57BEBF8080F361B" Guid="871e9d5e-bd97-0624-1af4-cbfaa6a84114">
+            <File Id="owfEA08BE9D386B8A7DE57BEBF8080F361B" Source="$(var.SourceDir)\docs\kraken-x3-z3-guide.md" KeyPath="yes" />
+          </Component>
+          <Component Id="owcD45D6E81A0AED7F497B57E19C1934A55" Guid="0b9c10f7-91ca-ce19-1cba-367e4c3959ed">
+            <File Id="owfD45D6E81A0AED7F497B57E19C1934A55" Source="$(var.SourceDir)\docs\nvidia-guide.md" KeyPath="yes" />
+          </Component>
+          <Component Id="owc2D79487A30E5F7E6E4E9611346D37E45" Guid="3eb3fe0f-6c09-99ca-1c31-8f5ef555741d">
+            <File Id="owf2D79487A30E5F7E6E4E9611346D37E45" Source="$(var.SourceDir)\docs\nzxt-e-series-psu-guide.md" KeyPath="yes" />
+          </Component>
+          <Component Id="owc794C1D80127644F5D66F035C67115BDE" Guid="2f35870b-e382-c379-e218-077b87860501">
+            <File Id="owf794C1D80127644F5D66F035C67115BDE" Source="$(var.SourceDir)\docs\nzxt-hue2-guide.md" KeyPath="yes" />
+          </Component>
+          <Component Id="owc299A61BAA724475284AC5A41BEBF6CD6" Guid="94686f3f-f133-730b-ce93-41df31a1c3bb">
+            <File Id="owf299A61BAA724475284AC5A41BEBF6CD6" Source="$(var.SourceDir)\docs\nzxt-smart-device-v1-guide.md" KeyPath="yes" />
+          </Component>
+          <Directory Id="owdA845CAAA7762607B19C8438F32D9550F" Name="windows">
+            <Component Id="owc99472197080A2C2387796533367CFF23" Guid="fb29b646-4138-d11e-54d2-e87f6d1e7748">
+              <File Id="owf99472197080A2C2387796533367CFF23" Source="$(var.SourceDir)\docs\windows\running-your-first-command-line-program.md" KeyPath="yes" />
+            </Component>
+          </Directory>
+        </Directory>
+      </Directory>
+    </Directory>
+    <ComponentGroupRef Id="Custom" />
+  </Module>
+</Wix>

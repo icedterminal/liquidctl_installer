@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+          <Directory Id="INSTALLLOCATION" Name="liquidctl">
+            <Merge Id="liquidctl_installerMM" SourceFile="$(var.liquidctl_installerMM.TargetPath)" DiskId="1" Language="1033"/>
+          </Directory>
+      </Directory>
+    </Directory>
+    <Feature Id="liquidctl_installer" Title="Program files" Description="Installs all the files needed for liquidctl. This is required." Level="1" AllowAdvertise="no" ConfigurableDirectory="INSTALLLOCATION" Absent="disallow">
+      <MergeRef Id="liquidctl_installerMM"/>
+    </Feature>
+	  <Feature Id="liquidctl_path" Title="PATH" Description="Add liquidctl install location to SYSTEM PATH for easy Terminal use." Level="1" AllowAdvertise="no">
+		  <Component Id="add_to_path" Guid="0452ad5a-efa8-49f2-95fb-3ecaf9332c07" Directory="TARGETDIR">
+			  <Environment Id="PATH" Name="PATH" Value="[INSTALLLOCATION]" Permanent="no" Part="last" Action="set" System="yes" />
+		  </Component>
+	  </Feature>
+  </Fragment>
+</Wix>
