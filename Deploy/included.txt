@@ -1,0 +1,14 @@
+appdirs==1.4.4
+colorama==0.4.4
+colorlog==6.3.0a1
+distlib==0.3.2
+docopt==0.6.2
+filelock==3.0.12
+hidapi==0.10.1
+liquidctl==1.7.1
+pyusb==1.2.1
+six==1.16.0
+pyinstaller==4.4
+pyinstaller-hooks-contrib==2021.2
+libusb 1.0.24 
+Python 3.9.1

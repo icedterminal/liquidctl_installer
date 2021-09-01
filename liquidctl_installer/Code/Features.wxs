@@ -2,7 +2,7 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
   <Fragment>
     <Directory Id="TARGETDIR" Name="SourceDir">
-      <Directory Id="ProgramFilesFolder">
+      <Directory Id="ProgramFiles64Folder">
           <Directory Id="INSTALLLOCATION" Name="liquidctl">
             <Merge Id="liquidctl_installerMM" SourceFile="$(var.liquidctl_installerMM.TargetPath)" DiskId="1" Language="1033"/>
           </Directory>
