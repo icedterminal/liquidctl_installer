@@ -37,7 +37,7 @@ bld/
 #wwwroot/
 
 # source files
-Deploy
+Deploy/
 
 # Visual Studio 2017 auto generated files
 Generated\ Files/
